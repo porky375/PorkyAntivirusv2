@@ -1,21 +1,49 @@
 import "./App.css";
 
+import Header from "./components/Header";
+import StatusCard from "./components/StatusCard";
+import ScanButton from "./components/ScanButton";
+
 export default function App() {
-  return (
-    <div className="app">
-      <h1>🛡️ Porky Antivirus</h1>
 
-      <div className="card">
-        <h2>System Status</h2>
-        <p>Your device is protected.</p>
+    function runScan() {
+        alert("Quick Scan Started");
+    }
 
-        <button>Run Quick Scan</button>
-      </div>
+    return (
+        <div className="app">
 
-      <div className="card">
-        <h2>Last Scan</h2>
-        <p>Never</p>
-      </div>
-    </div>
-  );
+            <Header />
+
+            <div className="grid">
+
+                <StatusCard
+                    title="Protection"
+                    value="Active"
+                />
+
+                <StatusCard
+                    title="Threats"
+                    value="0"
+                />
+
+                <StatusCard
+                    title="Last Scan"
+                    value="Never"
+                />
+
+                <StatusCard
+                    title="Version"
+                    value="1.0"
+                />
+
+            </div>
+
+            <ScanButton
+                onClick={runScan}
+            />
+
+        </div>
+    );
+
 }
