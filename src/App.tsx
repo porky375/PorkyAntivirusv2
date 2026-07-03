@@ -31,6 +31,7 @@ export default function App() {
                     value={sandboxCode}
                     onChange={handleSandboxChange}
                 ></textarea>
+                <ScanButton onClick={() => {}} />
             </main>
         </div>
     );
