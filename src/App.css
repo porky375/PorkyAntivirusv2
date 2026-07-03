@@ -1,28 +1,49 @@
-.app{
-    max-width:700px;
-    margin:auto;
-    padding:40px 20px;
-}
+import "./App.css";
 
-h1{
-    text-align:center;
-    margin-bottom:40px;
-}
+import Header from "./components/Header";
+import StatusCard from "./components/StatusCard";
+import ScanButton from "./components/ScanButton";
 
-.card{
-    background:#1f2937;
-    padding:20px;
-    border-radius:14px;
-    margin-bottom:20px;
-}
+export default function App() {
 
-button{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    margin-top:20px;
-    background:#3b82f6;
-    color:white;
-    font-size:16px;
+    function runScan() {
+        alert("Quick Scan Started");
+    }
+
+    return (
+        <div className="app">
+
+            <Header />
+
+            <div className="grid">
+
+                <StatusCard
+                    title="Protection"
+                    value="Active"
+                />
+
+                <StatusCard
+                    title="Threats"
+                    value="0"
+                />
+
+                <StatusCard
+                    title="Last Scan"
+                    value="Never"
+                />
+
+                <StatusCard
+                    title="Version"
+                    value="1.0"
+                />
+
+            </div>
+
+            <ScanButton
+                onClick={runScan}
+            />
+
+        </div>
+    );
+
 }
