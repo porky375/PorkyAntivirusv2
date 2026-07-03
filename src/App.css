@@ -1,0 +1,28 @@
+.app{
+    max-width:700px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:20px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    margin-top:20px;
+    background:#3b82f6;
+    color:white;
+    font-size:16px;
+}
